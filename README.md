@@ -51,18 +51,18 @@ To run SLAM and start the mapping process the following commands need to be runn
 | Command | Function |
 |----------|----------|
 | `ros2 launch slam slam.launch.py` | Launch SLAM so that the LiDAR can start generating data and rover movement is enabled. |
-| `ros2 launch slam rviz2` | Launch RViz2 so that the Raspberry Pi 5 translate LiDAR data into a 2D map that can be visualized. |
-| `ros2 launch peripherals teleopkeys.launch.py` | Launch Teleop Keys to control the rover using a keyboard from the base station. |
+| `ros2 launch slam rviz2_rtabmap.launch` | Launch RViz2 so that the Raspberry Pi 5 translate LiDAR data into a 2D map that can be visualized. |
+| `ros2 launch peripherals teleop_key_control.launch.py` | Launch Teleop Keys to control the rover using a keyboard from the base station. |
 
 <table align="center">
   <tr>
     <td align="center">
       <img width="337" height="449" alt="image" src="https://github.com/user-attachments/assets/3be89ff5-108d-4a0b-ba06-a0c8fb2e5ad1" /><br>
-      2D Map of arena visualized on rviz
+      2D Map of arena visualized on rviz; the rainbow outlines represents what the LiDAR is currently scanning
     </td>
     <td align="center">
       <img width="337" height="449" alt="image" src="https://github.com/user-attachments/assets/6e5652a5-8b83-422c-94a9-ad0b6d95f01b" /><br>
-      Physical arena that is being mapped
+      Physical Arena being mapped
     </td>
   </tr>
 </table>
@@ -109,7 +109,7 @@ After the YOLOv5 model was trained in Google Colab, the resulting best.pt file c
 As shown in the figure below, the left side displays the live camera feed captured by the rover. The right side displays the processed video stream at a reduced frame rate, allowing sufficient computational resources for the YOLOv5 model to perform object detection accurately. The model successfully identifies wooden blocks within the environment and places green bounding boxes around the detected objects.
 
 <p align="center">
-  <img width="714" height="416" alt="image" src="https://github.com/user-attachments/assets/58bfc648-0a99-4f96-a955-04a339ac4e5c" />
+  <img width="537" height="300" alt="image" src="https://github.com/user-attachments/assets/109c116a-4cfe-4535-9dc3-985f93dac252" />
 </p>
 <p align="center">
   <em><b>Fig 5:</b> Live camera view on rover</em>
@@ -117,6 +117,18 @@ As shown in the figure below, the left side displays the live camera feed captur
 
 ### Pathfinding
 
+After a map is saved onto the Pi; the rover can then receive input commands to send it from point A to point B. This is done by using the 2D point estimation tool where the green arrow is the drection the rover will move in.
+
+<p align="center">
+<img width="608" height="386" alt="image" src="https://github.com/user-attachments/assets/856d6b01-75d3-494e-aa13-d1091289cfac" />
+</p>
+<p align="center">
+  <em><b>Fig 6:</b> Pathfinding using saved map</em>
+</p>
+
+## Live Demo
+
+[![Watch the demo](https://img.youtube.com/vi/5KnCUVMfur4/maxresdefault.jpg)](https://www.youtube.com/watch?v=5KnCUVMfur4)
 
 ## Conclusions
 
