@@ -133,3 +133,31 @@ After a map is saved onto the Pi; the rover can then receive input commands to s
 ## Conclusions
 
 This senior design project resulted in the development of an autonomous rover that can map an unknown arena and navigate between two points. Through the use of ROS2, 2D Lidar, SLAM, and a YOLOv5 machine learning model, the team was able to create a fully functional system that demonstrates the real-world applications of autonomous navigation and object detection. Despite the overall challenges that were faced this project was able to provide me with value experience in embedded systems and robotics middleware for my future career.
+
+## Safety and Ethical Considerations:
+
+The rover was designed with certain safety and ethical considerations in mind.
+
+**IEEE 315-1975, ISO 66469-1:2019**
+Focuses on general safety requirements, for a system to comply with standards it must meet criteria’s during testing: no evidence of electrolyte leakage, nor fire or explosion, no rupture, and no electrical isolation, and designing circuits with correct symbols, and building a efficient circuit with correct components.
+
+**IEEE 112-2017, ISO 13849-1**
+Its primary goal is to create consistent user experience across different types of devices, making energy-saving power management features easier to understand and use. Devices should have consistent behavior and responsiveness within their substates
+
+**IEEE 7000-2021, ISO/IEC 22989:2022**
+An international standard that establishes a comprehensive framework of terminology and concepts for AI. This document describes concepts to support the development of other standards and facilitates communication among diverse parties.
+
+**IEEE 1872-2015, ISO/IEC 27001**
+Defines the most fundamental and general concepts in robotics and automation domain. Components and ontologies mentioned in the document are CORAX, POS. POS captures general concepts about position, orientation, and pose which are critical for spatial reasoning in robotics.
+
+**IEEE 2846-2022, ISO/IEC TR 24368**
+Establishes framework for the assumptions on automated driving systems. This standard aims to balance safety with natural driving behavior.
+
+## References
+
+[1] “Standards.” IEEE Standards Association, 12 Sept. 2023, standards.ieee.org/standard/.<br>
+
+[2] “Popular Standards.” ISO, 31 Jan. 2024, www.iso.org/popular-standards.html.<br>
+
+[3] HiWonder. “Mentorpi.” MentorPi - MentorPi v2.0 Documentation, 2025, wiki.hiwonder.com/projects/MentorPi/en/latest/.<br>
+
