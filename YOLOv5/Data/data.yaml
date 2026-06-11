@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['Ramp', 'Wooden Block']
+
+roboflow:
+  workspace: auto-nav-rover
+  project: rover-identifcation-v3
+  version: dataset
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/auto-nav-rover/rover-identifcation-v3/dataset/dataset
